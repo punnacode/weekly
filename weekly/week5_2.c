@@ -17,6 +17,8 @@ void isPalindrome(char str[])
 
 int main()
 {
-    isPalindrome("abba");
-    isPalindrome("abcade");
+    char *str;
+    printf("Enter the string: ");
+    scanf("%s", str);
+    isPalindrome(str);
 }
