@@ -1,24 +1,32 @@
-#include <stdio.h>
-
+#include<stdio.h>
+#include <conio.h>
+ 
+int sumofarray(int a[],int n)
+{
+ 	int i,sum=0;
+ 
+    for(i=0; i<n; i++)
+    {
+         sum+=a[i];
+         
+    }
+ 	return sum;
+ }
 int main()
 {
-	int Size, sum = 0;
-	float avg = 0;
-
-	printf("Please Enter the Array size = ");
-	scanf("%d", &Size);
-
-	int arr[100];
-
-	printf("Enter the Array Elements : ");
-	for (int i = 0; i < Size; i++)
-	{
-		scanf("%d", &arr[i]);
-		sum = sum + arr[i];
-	}
-
-	avg = (float)sum / Size;
-
-	printf("\nThe Sum of Array Elements     = %d\n", sum);
-	printf("\nThe Average of Array Elements = %.2f\n", avg);
+    int a[1000],i,n,sum;
+   
+    printf("Enter size of the array : ");
+    scanf("%d", &n);
+ 
+    printf("Enter elements in array : ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+ 
+    sum=sumofarray(a,n);
+    printf("sum of array is :%d",sum);
+ 
+    
 }
