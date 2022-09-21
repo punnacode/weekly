@@ -1,12 +1,7 @@
 #include <stdio.h>
- 
-int main()
-{
-    int number, i, k, count = 1;
- 
-    printf("Enter number of rows: ");
-    scanf("%d", &number);
-    count = number - 1;
+void DiamondPattern(int number) 
+{int i, k, count = 1;
+     count = number - 1;
     for (k = 1; k <= number; k++)
     {
         for (i = 1; i <= count; i++)
@@ -28,3 +23,12 @@ int main()
       }
       return 0;
 }
+int main()
+{
+    int number; 
+    printf("Enter number of rows: ");
+    scanf("%d", &number);
+    DiamondPattern(number);
+    return 0;
+}
+    
